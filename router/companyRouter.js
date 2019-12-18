@@ -2,8 +2,8 @@ const router = require('express').Router();
 const bcrypt = require('bcryptjs');
 
 // Pull in middleware
-const validatePost = require('');
-const restricted = require('');
+const validatePost = require('../middleware/validatePost');
+const restricted = require('../middleware/restricted');
 
 //Pull in knex helper models
 const  userDb = require('');
