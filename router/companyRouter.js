@@ -39,7 +39,7 @@ router.post('/login', validatePost, (req, res) => {
 				res.status(200).json({ message: "Logged in"});
 				
 			} else {
-				res.status(401).json({ message: 'Invalid Credentials' });
+				res.status(401).json({ message: 'You shall not pass!'});
 			}
 		})
 		.catch(error => {
