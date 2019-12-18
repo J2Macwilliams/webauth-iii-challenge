@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const  companyRouter = require('');
+const  companyRouter = require('../router/companyRouter');
 
 server.use('/api', companyRouter);
 
