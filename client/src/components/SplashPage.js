@@ -1,11 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react';
+import axios from 'axios';
 
 function SplashPage() {
-    return (
-        <div>
-            
-        </div>
-    )
+	return <div></div>;
 }
 
-export default SplashPage
+export default SplashPage;
