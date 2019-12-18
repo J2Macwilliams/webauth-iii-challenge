@@ -1,10 +1,13 @@
 const router = require('express').Router();
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
+
 
 // Pull in middleware
 const validatePost = require('../middleware/validatePost');
 const restricted = require('../middleware/restricted');
+
+// pull in token
+const signToken = require('../JWT/signToken');
 
 //Pull in knex helper models
 const  userDb = require('../models/userDb');
@@ -52,10 +55,6 @@ router.post("/login", validatePost, (req, res) => {
 	  });
   });
 
-// Logout---------------------------------------------------
-router.get('/logout', (req, res) => {
-
-});
 
 // Global GET with restricted middleware------------------------------
 router.get('/restricted/users', restricted, (req, res) => {
@@ -69,21 +68,5 @@ router.get('/restricted/users', restricted, (req, res) => {
 		});
 });
 
-
-
-// this functions creates and signs the token
-function signToken(user) {
-	const payload = {
-	  username: user.username
-	};
-  
-	const secret = process.env.JWT_SECRET;
-  
-	const options = {
-	  expiresIn: "1h",
-	};
-  
-	return jwt.sign(payload, secret, options); // notice the return
-  }
 
 module.exports = router;
