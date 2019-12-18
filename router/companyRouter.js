@@ -6,7 +6,7 @@ const validatePost = require('../middleware/validatePost');
 const restricted = require('../middleware/restricted');
 
 //Pull in knex helper models
-const  userDb = require('');
+const  userDb = require('../models/userDb');
 
 // Register--------------------------------------------
 router.post('/register', validatePost, (req, res) => {
