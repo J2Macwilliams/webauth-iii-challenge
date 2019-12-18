@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function HomePage() {
+const [users , setUsers] = useState([])
 	useEffect(() => {
 		axios
 			.get('')
