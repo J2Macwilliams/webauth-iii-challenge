@@ -2,3 +2,8 @@
   text-align: center;
 }
 
+html {
+  font-size: 62.5%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
