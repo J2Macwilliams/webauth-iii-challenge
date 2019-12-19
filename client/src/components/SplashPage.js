@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-import NavBar from './NavBar';
+import LoginBar from './LoginBar';
 
 import {
 	TextField,
@@ -41,7 +41,7 @@ const useStyles = makeStyles(theme => ({
     container: {
         background: '#2d132c',
         height: '100vh',
-        width: '100% ',
+        width: '100vw ',
         border: '2px solid #ee4540'
     }
 }));
@@ -73,7 +73,7 @@ function SplashPage() {
 
 	return (
 		<div>
-			<NavBar />
+			<LoginBar />
 			<div className={classes.container} >
 				<Paper className={classes.paper}>
 					<form

@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
+
 import axios from 'axios';
+
+import NavBar from './NavBar'
+
 import {
 	Container,
 	Grid,
@@ -36,6 +40,7 @@ function HomePage() {
 
 	return (
 		<div>
+			<NavBar />
 			<Container className={classes.root}>
 				{users.map(e => (
 					<Grid item xs={12} sm={6} md={3} >
