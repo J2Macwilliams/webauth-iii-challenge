@@ -20,7 +20,7 @@ function NavBar() {
 			.post('http://localhost:5000/api/login', user)
 			.then(res => {
                 console.log('Post', res);
-                localStorage.setItem("token", res.data.token);
+                localStorage.setItem("user_token", res.data.token);
 			})
 			.catch(err => {
 				console.log(err);

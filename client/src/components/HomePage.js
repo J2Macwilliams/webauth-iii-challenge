@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import axios from 'axios';
+import axiosWithAuth from '../../utils/AxioswithAuth';
 
 import NavBar from './NavBar'
 
@@ -27,8 +27,8 @@ function HomePage() {
 	const classes = useStyles();
 	const [users, setUsers] = useState([]);
 	useEffect(() => {
-		axios
-			.get('http://localhost:5000/api/restricted/users')
+		axiosWithAuth()
+			.get('/api/restricted/users')
 			.then(res => {
                 console.log(res);
                 setUsers(res.data)
